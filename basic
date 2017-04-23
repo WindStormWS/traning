@@ -1,0 +1,53 @@
+// 1.cpp: определяет точку входа для консольного приложения.
+//
+
+#include "stdafx.h" //Подключение модулей (директивов)
+#include <iostream>
+#include <string>
+
+using namespace std; //std::string name; (using namespace std = string name;)
+
+int main() //int (intenge),char (char - один элемент), bool (0,1), float (3.14 [плавающая точка], unsigned int (значения с +) //char symbol = 'd'; - выводит символ
+{
+	//код
+	//1
+	std::string name;
+	cout << "What is your name?\n"; //cout используется для отображения текста // << указывает, что отправляется на экран
+	getline(std::cin, name); //Дает возможность писать в программе
+	cout << "Hello, " << name << "!\n"; //[\n] след. строка с новой строки
+	cout << name << ", please, enter a random num\n";                            // int num = 10; // "num" можно заменить на любое слово (например "Число ПИ = 3.14")
+		                                                                  // cout << "Num is " << num << "\n"; // Выводит определенное число (num = 10 [выводит число 10]
+	//2
+	int num; //можно писать через запятую [num_1, num_2, sum]
+	cin >> num; // Вывводит число, которое ввел пользователь
+	cout << "Num is " << num << "\n";
+	getline(std::cin, name);
+
+	//3
+	int num_1, num_2, result;
+	cout << "Please, try again use this operation\n" << "Enter a random num\n";
+	cin >> num_1;
+	getline(std::cin, name);
+	cout << "Enter one more random num\n";
+	cin >> num_2;
+	getline(std::cin, name);
+	result = num_1 + num_2; // num_1 (+, -, *, /) num_2;
+	cout << num_1 << " + " << num_2 << " = " << result << "\n"; // Вместо \n - endl; // результат можно умножить или поделить (2 результат) - result = result*2; или result *= 2;
+	
+	//4															
+    // if (result [<, >, <=, >=, != - не равно] o) {
+	//    cout << result << endl;
+	//    result ++;
+	//} else if (result > 23) {
+	//    cout << Result is bigger than 15 and lower than 23 << endl;
+	//} else (result []) //[else if - повторная проверка]
+	//    cout << "Result is lower than 23" << endl; 
+	//} // если одна строчка кода, то можно убрать "{}" 
+	// || - или (equal - равен)
+
+	system("pause"); //не закрывает тест
+	// cin.get(); [Мигающий курсос в программе]
+	
+
+	return 0; //позволяет понять тесту, что программа успешно выполнялась
+}
